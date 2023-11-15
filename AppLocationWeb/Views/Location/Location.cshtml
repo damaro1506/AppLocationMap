@@ -59,16 +59,23 @@
             }
 
             let searchResults = await placeSearch(input, ll);
+            console.log(searchResults);
             let { results } = searchResults;
 
+            console.log(results);
+
             results.forEach(result => {
-                let { name, location } = result;
+                let { fsq_id ,name, location } = result;
                 let { address, cross_street, locality, formatted_address, country } = location;
                 let { latitude, longitude } = result.geocodes.main;
                 let marker = L.marker([latitude, longitude]).addTo(globalMap);
+                marker.on('click', onMarkerClick);
                 allMarkers.push(marker);
                 globalMap.addLayer(marker);
-                marker.bindPopup(`<b>${name}</b><br><br>${address} ${cross_street}, ${locality}, ${formatted_address}, ${country}`);
+                marker.bindPopup(`<b>${name}</b><br><br>${address} ${cross_street}, ${locality}, ${formatted_address}, ${country}<br><br><div class="container" > <img src="https://images.adsttc.com/media/images/61e4/f0d1/ebe2/ef01/66a4/f9c2/newsletter/enotokio-nodotaller01-ok.jpg?1642393951" alt = "Avatar" class= "image" ></div>
+                        <div class="container" > <img src="https://media.istockphoto.com/id/180258510/es/foto/comida-r%C3%A1pida.jpg?s=612x612&w=0&k=20&c=gaho_1nDV2zc_dw-zTf0JXaLpbS_q2YwyC0S1KFZCQ0=" alt = "Avatar" class= "image" ></div>
+                                <br><br><div class="text">Tips: Un lugar para comer muy rico</div>`);
+                
 
                 
             });
@@ -103,43 +110,71 @@
         }
     }
 
+    function getPhotosOfLocation(placeId) {
+
+        const url = getPlacesPhotosIrl();
+        const options = {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'fsq3WrG+/PGBTdjVwCHiQJ/fIQB92ShDBPc7BdLM9jLNWyE='
+            }
+        };
+
+        return fetch(url, options)
+            .then(response => response.json())
+            .then(data => {
+                // Procesa y muestra los datos de las fotos aquí
+                console.log(data);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    }
+
+    function getPlacePhotosUrl(placeId) {
+        return `https://api.foursquare.com/v3/places/${placeId}/photos`;
+    }
+
     document.addEventListener('DOMContentLoaded', initMap);
 
     function searchLocations() {
-        //aqui cargamos toda la data necesaria.
         let datoInput = document.getElementById('inputBusqueda').value;
         let laString = currentLatitude.toString();
         let loString = currentLongitude.toString();
         let ll = laString + ',' + loString;
         placeSearchCallback(datoInput, ll);
-        for (var i = 0; i < allMarkers.length; i++) {
-            allMarkers[i].on('click', onMarkerClick);
-        }
-        console.log(datoInput);
+        // for (var i = 0; i < allMarkers.length; i++) {
+        //     allMarkers[i].on('domready', function (marker) {
+        //         marker.on('click', onMarkerClick);
+        //     });
+        // }
+        console.log(allMarkers);
     }
-    function onMarkerClick(e) {
-        // 'this' en este contexto es el marcador que fue clickeado
-         selectedlat = this.getLatLng().lat;
-         selectedlng = this.getLatLng().lng;
-         selectedData = this.options.anyOtherData;
+    function onMarkerClick(event) {
 
+        let marker = event.target;
+        selectedlat = marker.getLatLng().lat;
+        selectedlng = marker.getLatLng().lng;
+        selectedData = marker.options.anyOtherData;
+        console.log(selectedData);
         // Ahora puedes enviar esta información al controlador
         // Puedes utilizar una solicitud AJAX o cualquier otra técnica que prefieras
         // ...
     }
 
-    const options = {
-        method: 'GET',
-        headers: {
-            accept: 'application/json',
-            Authorization: 'fsq3WrG+/PGBTdjVwCHiQJ/fIQB92ShDBPc7BdLM9jLNWyE='
-        }
-    };
+    // const options = {
+    //     method: 'GET',
+    //     headers: {
+    //         accept: 'application/json',
+    //         Authorization: 'fsq3WrG+/PGBTdjVwCHiQJ/fIQB92ShDBPc7BdLM9jLNWyE='
+    //     }
+    // };
 
-    fetch('https://api.foursquare.com/v3/places/4bb687ee2f70c9b6c0978530/photos', options)
-        .then(response => response.json())
-        .then(response => console.log(response))
-        .catch(err => console.error(err));
+    // fetch('https://api.foursquare.com/v3/places/4bb687ee2f70c9b6c0978530/photos', options)
+    //     .then(response => response.json())
+    //     .then(response => console.log(response))
+    //     .catch(err => console.error(err));
 
 
 </script>

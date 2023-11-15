@@ -27,7 +27,7 @@ namespace Backend.AppLocation.Repositories
             get
             {
                 if (String.IsNullOrEmpty(_connectionString))
-                    _connectionString = _helper.Pruebas();
+                    _connectionString = _helper.GetConnectionString();
 
                 return _connectionString;
             }
@@ -39,7 +39,7 @@ namespace Backend.AppLocation.Repositories
 
         public User GetUserById(int id)
         {
-            connectionString = _helper.Pruebas();
+            connectionString = _helper.GetConnectionString();
             using (var connection = new SqlConnection(connectionString))
             {
                 var command = new SqlCommand

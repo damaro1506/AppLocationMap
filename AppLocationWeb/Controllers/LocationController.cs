@@ -36,7 +36,7 @@ namespace AppLocationWeb.Controllers
         public ActionResult Index()
         {
             var param = "diego.amaror@gmail.com";
-            var cs = _helper.Pruebas();
+            var cs = _helper.GetConnectionString();
             var user = myUserService.GetUserByUserNameOrEmail(param, cs);
             Console.WriteLine(user);
             return View();
@@ -47,7 +47,7 @@ namespace AppLocationWeb.Controllers
             var config = new MapperConfiguration(cfg => cfg.AddProfile<UserProfile>());
             var mapper = new Mapper(config);
             var param = "diego.amaror@gmail.com";
-            var cs = _helper.Pruebas();
+            var cs = _helper.GetConnectionString();
             var user = myUserService.GetUserByUserNameOrEmail(param, cs);
             UserModel usermodel = mapper.Map<User, UserModel>(user);
             Console.WriteLine(usermodel);
@@ -56,7 +56,10 @@ namespace AppLocationWeb.Controllers
 
         public ActionResult Favorites()
         {
-            return View();
+            //var locations = myUserService.GetUserByUserNameOrEmail(param, cs);
+            List<LocationModel> favorites = new List<LocationModel>();
+
+            return View(favorites);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

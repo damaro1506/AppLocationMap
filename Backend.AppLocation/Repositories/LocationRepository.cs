@@ -64,7 +64,7 @@ namespace Backend.AppLocation.Repositories
                 Id = reader.GetInt64("Id"),
                 FsqId = reader["Fsq_Id"].ToString(),
                 Name = reader["Name"].ToString(),
-                Adress = reader["Adress"].ToString(),
+                Address = reader["Address"].ToString(),
                 Latitude = reader["Latitude"].ToString(),
                 Longitude = reader["Longitude"].ToString()
             };
@@ -82,7 +82,7 @@ namespace Backend.AppLocation.Repositories
                     };
                     command.Parameters.Add(new SqlParameter("@Fsq_Id", location.FsqId));
                     command.Parameters.Add(new SqlParameter("@Name", location.Name));
-                    command.Parameters.Add(new SqlParameter("@Adress", location.Adress));
+                    command.Parameters.Add(new SqlParameter("@Address", location.Address));
                     command.Parameters.Add(new SqlParameter("@Latitude", location.Latitude));
                     command.Parameters.Add(new SqlParameter("@Longitude", location.Longitude));
                 
@@ -105,7 +105,7 @@ namespace Backend.AppLocation.Repositories
                     };
                     command.Parameters.Add(new SqlParameter("@Fsq_Id", location.FsqId));
                     command.Parameters.Add(new SqlParameter("@Name", location.Name));
-                    command.Parameters.Add(new SqlParameter("@Adress", location.Adress));
+                    command.Parameters.Add(new SqlParameter("@Address", location.Address));
                     command.Parameters.Add(new SqlParameter("@Latitude", location.Latitude));
                     command.Parameters.Add(new SqlParameter("@Longitude", location.Longitude));
 
