@@ -2,6 +2,6 @@
 {
     public interface IHelper
     {
-        string Pruebas();
+        string GetConnectionString();
     }
 }

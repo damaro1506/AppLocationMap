@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "tUQP6d3m6pnMBPLaUlHUOCcUA1xCMF6wp22k07og5oo0ClXQ7AUCz3A8kgTpsEme+y0WjNzKvZC2CjXfaUVRew==",
+  "dgSpecHash": "j3bfOnyXabWJLN+yoWF+eM48yO1/xweybNu1NlOzkiMyy4Y5WUa+zGZvbia/fMfzjZdeT88Miuu74tLBkgAfCw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\diego.amaro\\source\\repos\\AppLocation\\AppLocationWeb\\AppLocationWeb.csproj",
+  "projectFilePath": "C:\\Users\\diego.amaro\\Source\\Repos\\AppLocationMap\\AppLocationWeb\\AppLocationWeb.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\diego.amaro\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\diego.amaro\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\diego.amaro\\.nuget\\packages\\microsoft.extensions.configuration\\7.0.0\\microsoft.extensions.configuration.7.0.0.nupkg.sha512",
     "C:\\Users\\diego.amaro\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\diego.amaro\\.nuget\\packages\\microsoft.extensions.configuration.binder\\7.0.4\\microsoft.extensions.configuration.binder.7.0.4.nupkg.sha512",

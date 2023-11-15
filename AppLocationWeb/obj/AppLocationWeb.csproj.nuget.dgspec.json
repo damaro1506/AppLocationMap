@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\diego.amaro\\source\\repos\\AppLocation\\AppLocationWeb\\AppLocationWeb.csproj": {}
+    "C:\\Users\\diego.amaro\\Source\\Repos\\AppLocationMap\\AppLocationWeb\\AppLocationWeb.csproj": {}
   },
   "projects": {
-    "C:\\Users\\diego.amaro\\source\\repos\\AppLocation\\AppLocationWeb\\AppLocationWeb.csproj": {
+    "C:\\Users\\diego.amaro\\Source\\Repos\\AppLocationMap\\AppLocationWeb\\AppLocationWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\diego.amaro\\source\\repos\\AppLocation\\AppLocationWeb\\AppLocationWeb.csproj",
+        "projectUniqueName": "C:\\Users\\diego.amaro\\Source\\Repos\\AppLocationMap\\AppLocationWeb\\AppLocationWeb.csproj",
         "projectName": "AppLocationWeb",
-        "projectPath": "C:\\Users\\diego.amaro\\source\\repos\\AppLocation\\AppLocationWeb\\AppLocationWeb.csproj",
+        "projectPath": "C:\\Users\\diego.amaro\\Source\\Repos\\AppLocationMap\\AppLocationWeb\\AppLocationWeb.csproj",
         "packagesPath": "C:\\Users\\diego.amaro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\diego.amaro\\source\\repos\\AppLocation\\AppLocationWeb\\obj\\",
+        "outputPath": "C:\\Users\\diego.amaro\\Source\\Repos\\AppLocationMap\\AppLocationWeb\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,8 +33,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\diego.amaro\\source\\repos\\AppLocation\\Backend.AppLocation\\Backend.AppLocation.csproj": {
-                "projectPath": "C:\\Users\\diego.amaro\\source\\repos\\AppLocation\\Backend.AppLocation\\Backend.AppLocation.csproj"
+              "C:\\Users\\diego.amaro\\Source\\Repos\\AppLocationMap\\Backend.AppLocation\\Backend.AppLocation.csproj": {
+                "projectPath": "C:\\Users\\diego.amaro\\Source\\Repos\\AppLocationMap\\Backend.AppLocation\\Backend.AppLocation.csproj"
               }
             }
           }
@@ -49,6 +49,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
             "Microsoft.Extensions.Configuration.Binder": {
               "target": "Package",
               "version": "[7.0.4, )"
@@ -81,14 +85,14 @@
         }
       }
     },
-    "C:\\Users\\diego.amaro\\source\\repos\\AppLocation\\Backend.AppLocation\\Backend.AppLocation.csproj": {
+    "C:\\Users\\diego.amaro\\Source\\Repos\\AppLocationMap\\Backend.AppLocation\\Backend.AppLocation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\diego.amaro\\source\\repos\\AppLocation\\Backend.AppLocation\\Backend.AppLocation.csproj",
+        "projectUniqueName": "C:\\Users\\diego.amaro\\Source\\Repos\\AppLocationMap\\Backend.AppLocation\\Backend.AppLocation.csproj",
         "projectName": "Backend.AppLocation",
-        "projectPath": "C:\\Users\\diego.amaro\\source\\repos\\AppLocation\\Backend.AppLocation\\Backend.AppLocation.csproj",
+        "projectPath": "C:\\Users\\diego.amaro\\Source\\Repos\\AppLocationMap\\Backend.AppLocation\\Backend.AppLocation.csproj",
         "packagesPath": "C:\\Users\\diego.amaro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\diego.amaro\\source\\repos\\AppLocation\\Backend.AppLocation\\obj\\",
+        "outputPath": "C:\\Users\\diego.amaro\\Source\\Repos\\AppLocationMap\\Backend.AppLocation\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,0 +1,15 @@
+﻿@model List<LocationModel>
+
+@{
+    ViewData["Title"] = "Favorites";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Tus lugares favoritos.</p>
+
+<ul>
+    @foreach (var location in Model)
+    {
+        <li>@location.Name, @location.Address</li>
+    }
+</ul>

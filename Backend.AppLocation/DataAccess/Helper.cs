@@ -9,7 +9,7 @@
             _configuration = configuration;
         }
 
-        public string Pruebas()
+        public string GetConnectionString()
         {
             var connectionString = _configuration.GetConnectionString("PruebasDiego");
             return connectionString;

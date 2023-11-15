@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rpsiI+jM6EIgS+AlEI+fEHMw7VDz0HNQLu+q5mvw3YjNhf47JNvqV7k+Wd3e5b5CQ5cNPrYQobt1eB7f4dyPFw==",
+  "dgSpecHash": "FtyNkyNohdX39Fw23gs/DCku7pFkI7IgSY/Ww+HYcMIAXUsQ2cK6q+JK5H9UTBh3X3V5HAOSiaiKDkn32Qd0Wg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\diego.amaro\\source\\repos\\AppLocation\\Backend.AppLocation\\Backend.AppLocation.csproj",
+  "projectFilePath": "C:\\Users\\diego.amaro\\Source\\Repos\\AppLocationMap\\Backend.AppLocation\\Backend.AppLocation.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\diego.amaro\\.nuget\\packages\\microsoft.extensions.configuration\\7.0.0\\microsoft.extensions.configuration.7.0.0.nupkg.sha512",
     "C:\\Users\\diego.amaro\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",

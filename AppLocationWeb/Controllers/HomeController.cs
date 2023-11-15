@@ -36,10 +36,10 @@ namespace AppLocationWeb.Controllers
             return View();
         }
 
-        public ActionResult PlaceLocation()
+        public ActionResult Location()
         {
             var param = "diego.amaror@gmail.com";
-            var cs = _helper.Pruebas();
+            var cs = _helper.GetConnectionString();
             var user = myUserService.GetUserByUserNameOrEmail(param,cs);
             Console.WriteLine(user);
             return View();
